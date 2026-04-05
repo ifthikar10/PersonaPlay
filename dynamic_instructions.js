@@ -1,8 +1,10 @@
-<script>
-  const cards = document.querySelectorAll('.game-card');
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.game-image');
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      const card = img.closest('.game-card');
+
       const title = encodeURIComponent(card.dataset.title);
       const time = encodeURIComponent(card.dataset.time);
       const questions = encodeURIComponent(card.dataset.questions);
@@ -14,4 +16,4 @@
       window.location.href = url;
     });
   });
-</script>
+});
