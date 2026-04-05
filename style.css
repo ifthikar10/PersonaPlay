@@ -326,3 +326,51 @@ body {
     text-align: center;
   }
 }
+
+/* Instruction */
+.instruction-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.instruction-left {
+  flex: 1;
+}
+
+.instruction-right {
+  flex: 1;
+}
+
+.game-preview {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 16px 0;
+}
+
+.game-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.start-button {
+  display: inline-block;
+  background: #ff5f45;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.instruction-right ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
