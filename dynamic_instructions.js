@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const questions = encodeURIComponent(card.dataset.questions);
       const difficulty = encodeURIComponent(card.dataset.difficulty);
       const image = encodeURIComponent(card.dataset.image);
+      const quiz = encodeURIComponent(card.dataset.quiz || "quiz.html");
 
       const url = `instruction.html?title=${title}&time=${time}&questions=${questions}&difficulty=${difficulty}&image=${image}`;
 
