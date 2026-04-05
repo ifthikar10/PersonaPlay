@@ -201,6 +201,15 @@ body {
   color: #555;
 }
 
+.game-image {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.game-image:hover {
+  transform: scale(1.03);
+}
+
 /* Tablet */
 @media (max-width: 900px) {
   .game-card {
