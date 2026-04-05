@@ -10,7 +10,9 @@ body {
   color: #333;
 }
 
-.header {
+/* Header / Navigation */
+.header,
+.instruction-header {
   width: 100%;
   padding: 18px 24px 0;
 }
@@ -142,7 +144,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .header {
+  .header,
+  .instruction-header {
     padding: 14px 14px 0;
   }
 
@@ -161,7 +164,7 @@ body {
   }
 }
 
-/* Body section*/
+/* Body section */
 .games-section {
   padding: 60px 24px;
   max-width: 1200px;
@@ -175,7 +178,7 @@ body {
 }
 
 .game-card {
-  width: calc(33.33% - 20px); /* 3 per row */
+  width: calc(33.33% - 20px);
   display: flex;
   flex-direction: column;
 }
@@ -186,6 +189,7 @@ body {
   object-fit: cover;
   background: #e5e5e5;
   border: 1px solid #ddd;
+  display: block;
 }
 
 .game-card h3 {
@@ -213,14 +217,14 @@ body {
 /* Tablet */
 @media (max-width: 900px) {
   .game-card {
-    width: calc(50% - 15px); /* 2 per row */
+    width: calc(50% - 15px);
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .game-card {
-    width: 100%; /* 1 per row */
+    width: 100%;
   }
 }
 
@@ -301,6 +305,7 @@ body {
   flex-wrap: wrap;
   font-size: 13px;
   color: #777;
+  width: 100%;
 }
 
 .footer-bottom-links {
@@ -336,50 +341,156 @@ body {
   }
 }
 
-/* Instruction */
-.instruction-container {
-  display: flex;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 20px;
+/* Instruction page */
+.instruction-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
 }
 
-.instruction-left {
-  flex: 1;
+.instruction-hero {
+  background: #f7f7f7;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 30px;
 }
 
-.instruction-right {
-  flex: 1;
+.hero-content {
+  max-width: 760px;
 }
 
-.game-preview {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin: 16px 0;
+.hero-kicker {
+  color: #ff5f45;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
-.game-info {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
-  font-size: 14px;
+.hero-title {
+  font-size: 42px;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
   color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
-.start-button {
-  display: inline-block;
-  background: #ff5f45;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+.hero-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.meta-item {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #444;
+}
+
+.hero-button-main {
   text-decoration: none;
-  font-weight: 600;
+  background: linear-gradient(135deg, #ff5f45, #ff7a59);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(255, 95, 69, 0.22);
+  display: inline-block;
 }
 
-.instruction-right ul {
-  margin-top: 10px;
-  padding-left: 20px;
+.hero-button-main:hover {
+  opacity: 0.95;
+}
+
+.instruction-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.instruction-image-box,
+.instruction-card {
+  flex: 1;
+}
+
+.instruction-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.instruction-card {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.instruction-card h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #ff5f45;
+}
+
+.instruction-copy {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.instruction-card h3 {
+  font-size: 20px;
+  margin: 24px 0 12px;
+  color: #333;
+}
+
+.instruction-list {
+  padding-left: 22px;
   line-height: 1.8;
+  color: #555;
+  font-size: 15px;
+}
+
+.instruction-list li {
+  margin-bottom: 8px;
+}
+
+/* Instruction responsive */
+@media (max-width: 900px) {
+  .instruction-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .instruction-page {
+    padding: 24px 14px 40px;
+  }
+
+  .instruction-hero {
+    padding: 24px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .instruction-image {
+    height: 240px;
+  }
 }
