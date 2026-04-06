@@ -661,6 +661,40 @@ body {
   display: none;
 }
 
+/* Radio inside answer */
+.answer-card {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hide default radio */
+.answer-radio {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5f45;
+  cursor: pointer;
+}
+
+/* Add spacing so radio doesn't overlap */
+.answer-card img {
+  margin-top: 10px;
+}
+
+/* Highlight selected card */
+.answer-radio:checked + img {
+  outline: 3px solid #ff5f45;
+  outline-offset: -3px;
+}
+
+/* Optional: smoother feel */
+.answer-card:hover img {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
 @media (max-width: 900px) {
   .answer-grid {
     grid-template-columns: 1fr;
