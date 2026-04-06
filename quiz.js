@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const quizKey = params.get("quiz") || "travel";
@@ -27,26 +26,42 @@ document.addEventListener("DOMContentLoaded", () => {
     questionImage.src = quiz.questionImage;
 
     answersGrid.innerHTML = "";
+    selectedType = null;
+    nextBtn.disabled = true;
 
-    q.answers.forEach((answer) => {
-      const btn = document.createElement("button");
-      btn.className = "answer-card";
+    q.answers.forEach((answer, index) => {
+      // Create label (clickable container)
+      const label = document.createElement("label");
+      label.className = "answer-card";
 
+      // Create radio input
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = "answer";
+      input.value = answer.type;
+      input.className = "answer-radio";
+
+      // Create image
       const img = document.createElement("img");
       img.src = quiz.answerImages[answer.type];
+      img.alt = answer.text;
 
+      // Create text
       const txt = document.createElement("p");
       txt.textContent = answer.text;
 
-      btn.appendChild(img);
-      btn.appendChild(txt);
+      // Append elements
+      label.appendChild(input);
+      label.appendChild(img);
+      label.appendChild(txt);
 
-      btn.onclick = () => {
+      // Handle selection
+      input.addEventListener("change", () => {
         selectedType = answer.type;
         nextBtn.disabled = false;
-      };
+      });
 
-      answersGrid.appendChild(btn);
+      answersGrid.appendChild(label);
     });
   }
 
@@ -61,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    nextBtn.disabled = true;
     renderQuestion();
   });
 
