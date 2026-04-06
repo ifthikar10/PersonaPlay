@@ -667,6 +667,23 @@ body {
   cursor: pointer;
 }
 
+/* Radio button styling */
+.answer-radio {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5f45;
+  cursor: pointer;
+}
+
+/* Highlight selected */
+.answer-radio:checked + img {
+  outline: 3px solid #ff5f45;
+  outline-offset: -3px;
+}
+
 /* Hide default radio */
 .answer-radio {
   position: absolute;
