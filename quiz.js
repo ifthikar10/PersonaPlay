@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const q = quiz.questions[current];
 
     // ✅ Question number
-    questionLabel.textContent = `Q${current + 1}:`;
+    questionLabel.textContent = `Q${current + 1} of ${quiz.questions.length}`;
 
     questionText.textContent = q.question;
     questionImage.src = quiz.questionImage;
