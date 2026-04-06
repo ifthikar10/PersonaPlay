@@ -1,3 +1,5 @@
+// quiz.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const quizKey = params.get("quiz") || "travel";
@@ -10,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const answersGrid = document.getElementById("answersGrid");
   const nextBtn = document.getElementById("nextBtn");
 
+  const progressFill = document.getElementById("progressFill");
+  const progressPercent = document.getElementById("progressPercent");
+
   let current = 0;
   let selectedType = null;
 
@@ -20,10 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
     creative: 0
   };
 
+  // ✅ Update progress based on completed questions
+  function updateProgress() {
+    const total = quiz.questions.length;
+    const percent = Math.round((current / total) * 100);
+
+    progressFill.style.width = `${percent}%`;
+    progressPercent.textContent = `${percent}%`;
+  }
+
   function renderQuestion() {
     const q = quiz.questions[current];
 
-    questionLabel.textContent = `Q${current + 1} of ${quiz.questions.length}`;
+    // ✅ Question number
+    questionLabel.textContent = `Q${current + 1}:`;
+
     questionText.textContent = q.question;
     questionImage.src = quiz.questionImage;
 
@@ -31,33 +47,27 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedType = null;
     nextBtn.disabled = true;
 
-    q.answers.forEach((answer, index) => {
-      // Create label (clickable container)
+    q.answers.forEach((answer) => {
       const label = document.createElement("label");
       label.className = "answer-card";
 
-      // Create radio input
       const input = document.createElement("input");
       input.type = "radio";
       input.name = "answer";
       input.value = answer.type;
       input.className = "answer-radio";
 
-      // Create image
       const img = document.createElement("img");
       img.src = quiz.answerImages[answer.type];
       img.alt = answer.text;
 
-      // Create text
       const txt = document.createElement("p");
       txt.textContent = answer.text;
 
-      // Append elements
       label.appendChild(input);
       label.appendChild(img);
       label.appendChild(txt);
 
-      // Handle selection
       input.addEventListener("change", () => {
         selectedType = answer.type;
         nextBtn.disabled = false;
@@ -65,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       answersGrid.appendChild(label);
     });
+
+    updateProgress();
   }
 
   nextBtn.addEventListener("click", () => {
@@ -74,12 +86,24 @@ document.addEventListener("DOMContentLoaded", () => {
     current++;
 
     if (current >= quiz.questions.length) {
-      alert("Quiz finished!");
+      showResult();
       return;
     }
 
     renderQuestion();
   });
+
+  function showResult() {
+    // Set progress to 100%
+    progressFill.style.width = "100%";
+    progressPercent.textContent = "100%";
+
+    const bestType = Object.keys(scores).reduce((a, b) =>
+      scores[a] > scores[b] ? a : b
+    );
+
+    alert(`Your personality type is: ${bestType}`);
+  }
 
   renderQuestion();
 });
