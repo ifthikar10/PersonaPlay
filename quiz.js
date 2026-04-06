@@ -27,26 +27,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     answersGrid.innerHTML = "";
 
-    q.answers.forEach((answer) => {
-      const btn = document.createElement("button");
-      btn.className = "answer-card";
+    q.answers.forEach((answer, index) => {
+    const label = document.createElement("label");
+    label.className = "answer-card";
 
-      const img = document.createElement("img");
-      img.src = quiz.answerImages[answer.type];
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "answer";
+    input.value = answer.type;
+    input.className = "answer-radio";
 
-      const txt = document.createElement("p");
-      txt.textContent = answer.text;
+    const img = document.createElement("img");
+    img.src = quiz.answerImages[answer.type];
+    img.alt = answer.text;
 
-      btn.appendChild(img);
-      btn.appendChild(txt);
+    const txt = document.createElement("p");
+    txt.textContent = answer.text;
 
-      btn.onclick = () => {
-        selectedType = answer.type;
-        nextBtn.disabled = false;
-      };
+    label.appendChild(input);
+    label.appendChild(img);
+    label.appendChild(txt);
 
-      answersGrid.appendChild(btn);
+    input.addEventListener("change", () => {
+      selectedType = answer.type;
+      nextBtn.disabled = false;
     });
+
+  answersGrid.appendChild(label);
+});
   }
 
   nextBtn.addEventListener("click", () => {
