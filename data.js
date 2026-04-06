@@ -1,24 +1,27 @@
+// data.js
+
 const quizBank = {
   travel: {
     title: "Travel Personality Quiz",
+    questionImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+
+    answerImages: {
+      adventurous: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
+      calm: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80",
+      social: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80",
+      creative: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80"
+    },
+
     questions: [
       {
-      question: "How do you prefer to spend your holiday?",
-      questionImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-
-      answers: [
+        question: "How do you prefer to spend your holiday?",
+        answers: [
           { text: "Exploring new places", type: "adventurous" },
           { text: "Relaxing quietly", type: "calm" },
           { text: "Hanging out with friends", type: "social" },
           { text: "Trying creative activities", type: "creative" }
         ]
       },
-      answerImages: {
-      adventurous: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
-      calm: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80",
-      social: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80",
-      creative: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80"
-    },
       {
         question: "Pick your ideal trip:",
         answers: [
