@@ -6,6 +6,7 @@
   <title>Home Page</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="quiz.js"></script>
 </head>
 <body>
 
@@ -44,7 +45,42 @@
   </header>
 
   <!--Body -->
-  
+  <main class="quiz-page">
+    <section class="quiz-toolbar">
+      <button id="resetBtn" class="icon-btn" aria-label="Reset quiz" title="Reset quiz">
+        &#8635;
+      </button>
+
+      <div class="quiz-progress-wrap">
+        <div class="quiz-progress-bar">
+          <div id="progressFill" class="quiz-progress-fill"></div>
+        </div>
+        <span id="progressPercent" class="quiz-progress-percent">0%</span>
+      </div>
+
+      <button id="soundBtn" class="icon-btn" aria-label="Toggle sound" title="Toggle sound">
+        <span id="soundIcon">&#128266;</span>
+      </button>
+    </section>
+
+    <section id="quizCard" class="quiz-card">
+      <p id="questionLabel" class="question-label">Q1:</p>
+      <h2 id="questionText" class="question-text">Question text</h2>
+
+      <img id="questionImage" class="question-image" src="" alt="Question image" />
+
+      <div class="answers-label">Answers:</div>
+      <div id="answersGrid" class="answer-grid"></div>
+
+      <button id="nextBtn" class="next-button" disabled>Next</button>
+    </section>
+
+    <section id="resultCard" class="result-card hidden">
+      <h2 id="resultTitle" class="result-title"></h2>
+      <p id="resultText" class="result-text"></p>
+      <button id="restartBtn" class="next-button">Restart Quiz</button>
+    </section>
+  </main>
 
   <!-- Footer Section -->
   <footer class="footer">
