@@ -1,5 +1,3 @@
-// data.js
-
 const quizBank = {
   travel: {
     title: "Travel Personality Quiz",
