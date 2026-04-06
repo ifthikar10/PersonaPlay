@@ -621,7 +621,7 @@ body {
   outline-offset: -3px;
 }
 
-.next-button {
+/*.next-button {
   margin-top: 34px;
   background: #ff5f45;
   color: #fff;
@@ -636,7 +636,7 @@ body {
 .next-button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
-}
+}*/
 
 .quiz-nav-buttons {
   display: flex;
