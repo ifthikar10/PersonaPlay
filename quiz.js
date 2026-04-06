@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const quiz = quizBank[quizKey] || quizBank.travel;
 
+  const questionLabel = document.getElementById("questionLabel");
   const questionText = document.getElementById("questionText");
   const questionImage = document.getElementById("questionImage");
   const answersGrid = document.getElementById("answersGrid");
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderQuestion() {
     const q = quiz.questions[current];
 
+    questionLabel.textContent = `Q${current + 1}:`;
     questionText.textContent = q.question;
     questionImage.src = quiz.questionImage;
 
