@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const startQuizMain = document.getElementById("startQuizMain");
 
   if (gameTitle) gameTitle.textContent = title;
+
   if (gameDescription) {
     gameDescription.textContent =
       "This quiz predicts your personality based on the choices you make. There are no right or wrong answers, and no score.";
   }
+
   if (gameTime) gameTime.textContent = `⏱ ${time}`;
   if (gameQuestions) gameQuestions.textContent = `❓ ${questions}`;
   if (gameDifficulty) gameDifficulty.textContent = `🎯 ${difficulty}`;
