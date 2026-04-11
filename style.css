@@ -244,7 +244,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Left */
 .footer-left {
   max-width: 300px;
 }
@@ -270,7 +269,6 @@ body {
   cursor: pointer;
 }
 
-/* Right */
 .footer-links {
   display: flex;
   gap: 60px;
@@ -295,7 +293,6 @@ body {
   color: #ff5f45;
 }
 
-/* Bottom */
 .footer-bottom {
   border-top: 1px solid #ddd;
   margin-top: 40px;
@@ -594,10 +591,11 @@ body {
 }
 
 .answer-card {
+  position: relative;
+  cursor: pointer;
   border: none;
   background: transparent;
   text-align: left;
-  cursor: pointer;
   padding: 0;
 }
 
@@ -607,6 +605,7 @@ body {
   object-fit: cover;
   background: #ddd;
   display: block;
+  margin-top: 10px;
 }
 
 .answer-card p {
@@ -661,30 +660,6 @@ body {
   display: none;
 }
 
-/* Radio inside answer */
-.answer-card {
-  position: relative;
-  cursor: pointer;
-}
-
-/* Radio button styling */
-.answer-radio {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 18px;
-  height: 18px;
-  accent-color: #ff5f45;
-  cursor: pointer;
-}
-
-/* Highlight selected */
-.answer-radio:checked + img {
-  outline: 3px solid #ff5f45;
-  outline-offset: -3px;
-}
-
-/* Hide default radio */
 .answer-radio {
   position: absolute;
   top: 12px;
@@ -695,18 +670,11 @@ body {
   cursor: pointer;
 }
 
-/* Add spacing so radio doesn't overlap */
-.answer-card img {
-  margin-top: 10px;
-}
-
-/* Highlight selected card */
 .answer-radio:checked + img {
   outline: 3px solid #ff5f45;
   outline-offset: -3px;
 }
 
-/* Optional: smoother feel */
 .answer-card:hover img {
   transform: scale(1.02);
   transition: 0.2s ease;
