@@ -3,35 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="data.js"></script>
-  <script src="quiz_results.js"></script>
-  <script src="quiz.js"></script>
+  <script src="quizlist.js" defer></script>
+  <script src="quiz.js" defer></script>
 </head>
 <body>
 
   <header class="header">
     <div class="topbar">
-      <div class="menu-icon">
-        &#9776;
-      </div>
+      <div class="menu-icon">&#9776;</div>
 
-      <div class="logo">
-        PersonaPlay
-      </div>
+      <div class="logo">PersonaPlay</div>
 
       <div class="search-box">
         <input type="text" placeholder="Search........" />
-        <button type="submit">
+        <button type="submit" aria-label="Search">
           <i class="fa fa-search"></i>
         </button>
       </div>
 
       <div class="auth-buttons">
         <a href="#" class="btn login">Log In</a>
-        <a href="#" class="btn signup">Sign In</a>
+        <a href="#" class="btn signup">Sign Up</a>
       </div>
     </div>
 
@@ -46,7 +41,6 @@
     </nav>
   </header>
 
-  <!--Body -->
   <main class="quiz-page">
     <section class="quiz-toolbar">
       <button id="resetBtn" class="icon-btn" aria-label="Reset quiz" title="Reset quiz">
@@ -74,56 +68,51 @@
       <div class="answers-label">Answers:</div>
       <div id="answersGrid" class="answer-grid"></div>
 
-      <button id="nextBtn" class="next-button" disabled>Next</button>
-    
-    </section>
-
-    <section id="resultCard" class="result-card hidden">
-      <h2 id="resultTitle" class="result-title"></h2>
-      <p id="resultText" class="result-text"></p>
-      <button id="restartBtn" class="next-button">Restart Quiz</button>
+      <div class="quiz-actions" style="display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap;">
+        <button id="prevBtn" class="next-button" disabled>Previous</button>
+        <button id="nextBtn" class="next-button" disabled>Next</button>
+      </div>
     </section>
   </main>
 
-  <!-- Footer Section -->
   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2 class="footer-logo">PersonaPlay</h2>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2 class="footer-logo">PersonaPlay</h2>
 
-      <p class="address">
-        <strong>Address:</strong><br>
-        219 Colinton Road, Edinburgh<br>
-        Scotland
-      </p>
+        <p class="address">
+          <strong>Address:</strong><br>
+          219 Colinton Road, Edinburgh<br>
+          Scotland
+        </p>
 
-      <div class="social-icons">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Site Links</h4>
+          <a href="#">About Us</a>
+          <a href="#">Help Center</a>
+          <a href="#">Site News</a>
+          <a href="#">Interest-Based Ads</a>
+          <a href="#">Do Not Sell or Share My Personal Information</a>
+        </div>
       </div>
     </div>
 
-    <div class="footer-links">
-      <div class="footer-column">
-        <h4>Site Links</h4>
-         <a href="#">About Us</a>
-        <a href="#">Help Center</a>
-        <a href="#">Site News</a>
-        <a href="#">Interest-Based Ads</a>
-        <a href="#">Do Not Sell or Share My Personal Information</a>
+    <div class="footer-bottom">
+      <p>© 2026 PersonaPlay. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>© 2026 PersonaPlay. All rights reserved.</p>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </div>
-</footer>
-  
 </body>
 </html>
