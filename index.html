@@ -6,7 +6,7 @@
   <title>Home Page</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -22,14 +22,14 @@
 
       <div class="search-box">
         <input type="text" placeholder="Search........" />
-        <button type="submit">
+        <button type="submit" aria-label="Search">
           <i class="fa fa-search"></i>
         </button>
       </div>
 
       <div class="auth-buttons">
         <a href="#" class="btn login">Log In</a>
-        <a href="#" class="btn signup">Sign In</a>
+        <a href="#" class="btn signup">Sign Up</a>
       </div>
     </div>
 
@@ -44,140 +44,138 @@
     </nav>
   </header>
 
-  <!--Body - Game Section -->
   <main class="games-section">
     <div class="games-grid">
-      <!-- 1 -->
-  <div class="game-card"
-       data-title="Travel Personality Quiz"
-       data-quiz="travel"
-       data-time="5 mins"
-       data-questions="10"
-       data-difficulty="Medium"
-       data-image="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Travel Personality Quiz"
+           data-quiz="travel"
+           data-time="5 mins"
+           data-questions="10"
+           data-difficulty="Medium"
+           data-image="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=800&q=80" />
-    <h3>Travel Personality Quiz</h3>
-    <p>Uncover your fashion style and how you express yourself through trends.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=800&q=80"
+             alt="Travel Personality Quiz" />
+        <h3>Travel Personality Quiz</h3>
+        <p>Uncover your personality style and how you express yourself through travel.</p>
+      </div>
 
-  <!-- 2 -->
-  <div class="game-card"
-       data-title="Fashion Personality Quiz"
-       data-quiz="fashion"
-       data-time="6 mins"
-       data-questions="8"
-       data-difficulty="Easy"
-       data-image="https://images.unsplash.com/photo-1594736797933-d0d78c0f6f3f?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Fashion Personality Quiz"
+           data-quiz="fashion"
+           data-time="6 mins"
+           data-questions="8"
+           data-difficulty="Easy"
+           data-image="https://images.unsplash.com/photo-1594736797933-d0d78c0f6f3f?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1594736797933-d0d78c0f6f3f?auto=format&fit=crop&w=800&q=80" />
-    <h3>Fashion Personality Quiz</h3>
-    <p>Uncover your fashion style and how you express yourself through trends.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1594736797933-d0d78c0f6f3f?auto=format&fit=crop&w=800&q=80"
+             alt="Fashion Personality Quiz" />
+        <h3>Fashion Personality Quiz</h3>
+        <p>Uncover your fashion style and how you express yourself through trends.</p>
+      </div>
 
-  <!-- 3 -->
-  <div class="game-card"
-       data-title="Flower Personality Quiz"
-       data-quiz="flower"
-       data-time="7 mins"
-       data-questions="12"
-       data-difficulty="Hard"
-       data-image="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Flower Personality Quiz"
+           data-quiz="flower"
+           data-time="7 mins"
+           data-questions="12"
+           data-difficulty="Hard"
+           data-image="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" />
-    <h3>Flower Personality Quiz</h3>
-    <p>See which flower represents your unique personality and inner nature.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+             alt="Flower Personality Quiz" />
+        <h3>Flower Personality Quiz</h3>
+        <p>See which flower represents your unique personality and inner nature.</p>
+      </div>
 
-  <!-- 4 -->
-  <div class="game-card"
-       data-title="Colour Personality Quiz"
-       data-quiz="colour"
-       data-time="8 mins"
-       data-questions="10"
-       data-difficulty="Medium"
-       data-image="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Colour Personality Quiz"
+           data-quiz="colour"
+           data-time="8 mins"
+           data-questions="10"
+           data-difficulty="Medium"
+           data-image="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" />
-    <h3>Colour Personality Quiz</h3>
-    <p>Reveal the colors that reflect your mood, energy, and personality traits.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80"
+             alt="Colour Personality Quiz" />
+        <h3>Colour Personality Quiz</h3>
+        <p>Reveal the colors that reflect your mood, energy, and personality traits.</p>
+      </div>
 
-  <!-- 5 -->
-  <div class="game-card"
-       data-title="Love Personality Quiz"
-       data-quiz="love"
-       data-time="5 mins"
-       data-questions="9"
-       data-difficulty="Easy"
-       data-image="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Love Personality Quiz"
+           data-quiz="love"
+           data-time="5 mins"
+           data-questions="9"
+           data-difficulty="Easy"
+           data-image="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=800&q=80" />
-    <h3>Love Personality Quiz</h3>
-    <p>Find out your love style and how you connect with others in relationships.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=800&q=80"
+             alt="Love Personality Quiz" />
+        <h3>Love Personality Quiz</h3>
+        <p>Find out your love style and how you connect with others in relationships.</p>
+      </div>
 
-  <!-- 6 -->
-  <div class="game-card"
-       data-title="Pets Personality Quiz"
-       data-quiz="pets"
-       data-time="6 mins"
-       data-questions="11"
-       data-difficulty="Medium"
-       data-image="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=900&q=80">
+      <div class="game-card"
+           data-title="Pets Personality Quiz"
+           data-quiz="pets"
+           data-time="6 mins"
+           data-questions="11"
+           data-difficulty="Medium"
+           data-image="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=900&q=80">
 
-    <img class="game-image"
-        src="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=800&q=80" />
-    <h3>Pets Personality Quiz</h3>
-    <p>Discover which type of pet best matches your personality and lifestyle.</p>
-  </div>
+        <img class="game-image"
+             src="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=800&q=80"
+             alt="Pets Personality Quiz" />
+        <h3>Pets Personality Quiz</h3>
+        <p>Discover which type of pet best matches your personality and lifestyle.</p>
+      </div>
     </div>
   </main>
 
-  <!-- Footer Section -->
   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2 class="footer-logo">PersonaPlay</h2>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2 class="footer-logo">PersonaPlay</h2>
 
-      <p class="address">
-        <strong>Address:</strong><br>
-        219 Colinton Road, Edinburgh<br>
-        Scotland
-      </p>
+        <p class="address">
+          <strong>Address:</strong><br>
+          219 Colinton Road, Edinburgh<br>
+          Scotland
+        </p>
 
-      <div class="social-icons">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
+        <div class="social-icons">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Site Links</h4>
+          <a href="#">About Us</a>
+          <a href="#">Help Center</a>
+          <a href="#">Site News</a>
+          <a href="#">Interest-Based Ads</a>
+          <a href="#">Do Not Sell or Share My Personal Information</a>
+        </div>
       </div>
     </div>
 
-    <div class="footer-links">
-      <div class="footer-column">
-        <h4>Site Links</h4>
-         <a href="#">About Us</a>
-        <a href="#">Help Center</a>
-        <a href="#">Site News</a>
-        <a href="#">Interest-Based Ads</a>
-        <a href="#">Do Not Sell or Share My Personal Information</a>
+    <div class="footer-bottom">
+      <p>© 2026 PersonaPlay. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>© 2026 PersonaPlay. All rights reserved.</p>
-    <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
-  </div>
-</footer>
-  
 </body>
 </html>
