@@ -117,6 +117,7 @@ body {
   text-decoration: underline;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .topbar {
     flex-wrap: wrap;
@@ -163,7 +164,7 @@ body {
   }
 }
 
-/* Home page */
+/* Body section */
 .games-section {
   padding: 60px 24px;
   max-width: 1200px;
@@ -213,19 +214,21 @@ body {
   transform: scale(1.03);
 }
 
+/* Tablet */
 @media (max-width: 900px) {
   .game-card {
     width: calc(50% - 15px);
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .game-card {
     width: 100%;
   }
 }
 
-/* Footer */
+/* Footer section */
 .footer {
   background: #f7f7f7;
   padding: 50px 24px 20px;
@@ -316,6 +319,7 @@ body {
   color: #ff5f45;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -463,6 +467,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* Instruction responsive */
 @media (max-width: 900px) {
   .instruction-layout {
     flex-direction: column;
@@ -615,26 +620,6 @@ body {
   outline-offset: -3px;
 }
 
-.answer-radio {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 18px;
-  height: 18px;
-  accent-color: #ff5f45;
-  cursor: pointer;
-}
-
-.answer-radio:checked + img {
-  outline: 3px solid #ff5f45;
-  outline-offset: -3px;
-}
-
-.answer-card:hover img {
-  transform: scale(1.02);
-  transition: 0.2s ease;
-}
-
 .next-button {
   margin-top: 34px;
   background: #ff5f45;
@@ -673,6 +658,26 @@ body {
 
 .hidden {
   display: none;
+}
+
+.answer-radio {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5f45;
+  cursor: pointer;
+}
+
+.answer-radio:checked + img {
+  outline: 3px solid #ff5f45;
+  outline-offset: -3px;
+}
+
+.answer-card:hover img {
+  transform: scale(1.02);
+  transition: 0.2s ease;
 }
 
 @media (max-width: 900px) {
