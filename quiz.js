@@ -1,10 +1,13 @@
-// quiz.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const quizKey = params.get("quiz") || "travel";
 
-  const quiz = quizBank[quizKey] || quizBank.travel;
+  const quiz = window.quizList?.[quizKey] || window.quizList?.travel;
+
+  if (!quiz) {
+    console.error("Quiz data not found.");
+    return;
+  }
 
   const questionLabel = document.getElementById("questionLabel");
   const questionText = document.getElementById("questionText");
@@ -17,25 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressFill = document.getElementById("progressFill");
   const progressPercent = document.getElementById("progressPercent");
 
-  const quizCard = document.getElementById("quizCard");
-  const resultCard = document.getElementById("resultCard");
-  const resultTitle = document.getElementById("resultTitle");
-  const resultText = document.getElementById("resultText");
-  const restartBtn = document.getElementById("restartBtn");
-
   const soundBtn = document.getElementById("soundBtn");
   const soundIcon = document.getElementById("soundIcon");
 
-  let current = 0;
-  let soundOn = true;
-
-  const scores = {
-    adventurous: 0,
-    calm: 0,
-    social: 0,
-    creative: 0
+  const resultBank = {
+    adventurous: {
+      title: "Adventurous Explorer",
+      text: "You like excitement, new experiences, and bold choices. You are the kind of person who enjoys stepping outside your comfort zone and discovering what is out there."
+    },
+    calm: {
+      title: "Peaceful Soul",
+      text: "You prefer comfort, balance, and a slower pace. You enjoy calm surroundings, thoughtful choices, and peaceful moments that help you recharge."
+    },
+    social: {
+      title: "Social Connector",
+      text: "You thrive around people. You enjoy connection, shared experiences, and being part of a group. Your energy grows when you are surrounded by others."
+    },
+    creative: {
+      title: "Creative Thinker",
+      text: "You enjoy expression, originality, and imagination. You like seeing things differently and often bring a fresh, artistic touch to whatever you do."
+    }
   };
 
+  let current = 0;
+  let soundOn = true;
   const selectedAnswers = Array(quiz.questions.length).fill(null);
 
   function playClick() {
@@ -68,6 +76,39 @@ document.addEventListener("DOMContentLoaded", () => {
     progressPercent.textContent = `${percent}%`;
   }
 
+  function getBestType() {
+    const scores = {
+      adventurous: 0,
+      calm: 0,
+      social: 0,
+      creative: 0
+    };
+
+    selectedAnswers.forEach((answerType) => {
+      if (answerType && Object.prototype.hasOwnProperty.call(scores, answerType)) {
+        scores[answerType]++;
+      }
+    });
+
+    return Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+  }
+
+  function showResult() {
+    const bestType = getBestType();
+    const result = resultBank[bestType] || resultBank.adventurous;
+
+    sessionStorage.setItem(
+      "quizResult",
+      JSON.stringify({
+        quizKey,
+        quizTitle: quiz.title,
+        resultType: bestType
+      })
+    );
+
+    window.location.href = "result.html";
+  }
+
   function renderQuestion() {
     const q = quiz.questions[current];
 
@@ -78,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     answersGrid.innerHTML = "";
     nextBtn.disabled = true;
-
     prevBtn.disabled = current === 0;
 
     q.answers.forEach((answer, index) => {
@@ -120,44 +160,19 @@ document.addEventListener("DOMContentLoaded", () => {
     updateProgress();
   }
 
-  function showResult() {
-    const bestType = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
-    const result = resultBank[quizKey]?.[bestType] || resultBank.travel.adventurous;
-
-    sessionStorage.setItem(
-      "quizResult",
-      JSON.stringify({
-        quizKey,
-        quizTitle: quiz.title,
-        resultType: bestType
-      })
-    );
-
-    window.location.href = "result.html";
-  }
-
   function restartQuiz() {
     current = 0;
-    Object.keys(scores).forEach(key => {
-      scores[key] = 0;
-    });
     for (let i = 0; i < selectedAnswers.length; i++) {
       selectedAnswers[i] = null;
     }
 
-    resultCard.classList.add("hidden");
-    quizCard.classList.remove("hidden");
     nextBtn.disabled = true;
     prevBtn.disabled = true;
-
     renderQuestion();
   }
 
   nextBtn.addEventListener("click", () => {
-    const chosen = selectedAnswers[current];
-    if (!chosen) return;
-
-    scores[chosen]++;
+    if (!selectedAnswers[current]) return;
 
     if (current >= quiz.questions.length - 1) {
       showResult();
@@ -179,10 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
   resetBtn.addEventListener("click", () => {
     restartQuiz();
     playClick();
-  });
-
-  restartBtn.addEventListener("click", () => {
-    restartQuiz();
   });
 
   soundBtn.addEventListener("click", () => {
