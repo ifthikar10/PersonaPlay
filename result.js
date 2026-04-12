@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       quizKey = parsed.quizKey || quizKey;
       resultType = parsed.resultType || resultType;
 
-      if (resultQuizTitle) {
+      /*if (resultQuizTitle) {
         resultQuizTitle.textContent = parsed.quizTitle
           ? `${parsed.quizTitle} Result`
           : "Your result";
-      }
+      } */
     } catch (error) {
       console.error("Could not read quiz result.", error);
     }
