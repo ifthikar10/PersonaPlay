@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const stored = sessionStorage.getItem("quizResult");
 
-  const resultQuizTitle = document.getElementById("resultQuizTitle");
+  /* const resultQuizTitle = document.getElementById("resultQuizTitle"); */
   const resultTitle = document.getElementById("resultTitle");
   const resultText = document.getElementById("resultText");
   const resultImage = document.getElementById("resultImage");
