@@ -23,25 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const soundBtn = document.getElementById("soundBtn");
   const soundIcon = document.getElementById("soundIcon");
 
-  const resultBank = {
-    adventurous: {
-      title: "Adventurous Explorer",
-      text: "You like excitement, new experiences, and bold choices. You are the kind of person who enjoys stepping outside your comfort zone and discovering what is out there."
-    },
-    calm: {
-      title: "Peaceful Soul",
-      text: "You prefer comfort, balance, and a slower pace. You enjoy calm surroundings, thoughtful choices, and peaceful moments that help you recharge."
-    },
-    social: {
-      title: "Social Connector",
-      text: "You thrive around people. You enjoy connection, shared experiences, and being part of a group. Your energy grows when you are surrounded by others."
-    },
-    creative: {
-      title: "Creative Thinker",
-      text: "You enjoy expression, originality, and imagination. You like seeing things differently and often bring a fresh, artistic touch to whatever you do."
-    }
-  };
-
   let current = 0;
   let soundOn = true;
   const selectedAnswers = Array(quiz.questions.length).fill(null);
@@ -95,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showResult() {
     const bestType = getBestType();
-    const result = resultBank[bestType] || resultBank.adventurous;
 
     sessionStorage.setItem(
       "quizResult",
@@ -162,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function restartQuiz() {
     current = 0;
+
     for (let i = 0; i < selectedAnswers.length; i++) {
       selectedAnswers[i] = null;
     }
