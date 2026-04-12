@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const image =
     params.get("image") ||
     "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=900&q=80";
-  const quizUrl = params.get("quiz") || "quiz.html";
+  const quizKey = params.get("quiz") || "travel";
 
   const gameTitle = document.getElementById("gameTitle");
   const gameDescription = document.getElementById("gameDescription");
@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (startQuizMain) {
-    startQuizMain.href = quizUrl;
+    startQuizMain.href = `quiz.html?quiz=${encodeURIComponent(quizKey)}`;
   }
 });
