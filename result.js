@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const stored = sessionStorage.getItem("quizResult");
 
-  /* const resultQuizTitle = document.getElementById("resultQuizTitle"); */
+  const resultQuizTitle = document.getElementById("resultQuizTitle"); 
   const resultTitle = document.getElementById("resultTitle");
   const resultText = document.getElementById("resultText");
   const resultImage = document.getElementById("resultImage");
@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       quizKey = parsed.quizKey || quizKey;
       resultType = parsed.resultType || resultType;
 
-      /*if (resultQuizTitle) {
+      if (resultQuizTitle) {
         resultQuizTitle.textContent = parsed.quizTitle
           ? `${parsed.quizTitle} Result`
           : "Your result";
-      } */
+      } 
     } catch (error) {
       console.error("Could not read quiz result.", error);
     }
