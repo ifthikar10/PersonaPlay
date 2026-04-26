@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const USERS_KEY = "personaplay_users";
   const CURRENT_USER_KEY = "personaplay_current_user";
 
+  const params = new URLSearchParams(window.location.search);
+  const mode = params.get("mode");
+
+  if (mode === "signup") {
+    showSignup();
+  } else {
+    showSignin();
+  }
+
   function getUsers() {
     return JSON.parse(localStorage.getItem(USERS_KEY) || "[]");
   }
