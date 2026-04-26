@@ -1,23 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".game-image");
+  const grid = document.getElementById("gamesGrid");
 
-  images.forEach((img) => {
-    img.addEventListener("click", () => {
-      const card = img.closest(".game-card");
-      if (!card) return;
+  if (!grid || !window.quizList) return;
 
-      const title = encodeURIComponent(card.dataset.title || "");
-      const time = encodeURIComponent(card.dataset.time || "");
-      const questions = encodeURIComponent(card.dataset.questions || "");
-      const difficulty = encodeURIComponent(card.dataset.difficulty || "");
-      const image = encodeURIComponent(card.dataset.image || "");
-      const quiz = encodeURIComponent(card.dataset.quiz || "travel");
+  Object.entries(window.quizList).forEach(([key, quiz]) => {
+    const card = document.createElement("div");
+    card.className = "game-card";
 
-      const url =
-        `instruction.html?title=${title}&time=${time}&questions=${questions}` +
-        `&difficulty=${difficulty}&image=${image}&quiz=${quiz}`;
+    card.innerHTML = `
+      <img class="game-image" src="${quiz.questionImage}" alt="${quiz.title}" />
+      <h3>${quiz.title}</h3>
+      <p>Discover your personality through this fun quiz.</p>
 
-      window.location.href = url;
+      <div class="game-meta">
+        <span>⏱ ${quiz.time}</span>
+        <span>❓ ${quiz.questions.length} questions</span>
+        <span>🎯 ${quiz.difficulty}</span>
+      </div>
+    `;
+
+    card.addEventListener("click", () => {
+      window.location.href = `instruction.html?quiz=${key}`;
     });
+
+    grid.appendChild(card);
   });
 });
