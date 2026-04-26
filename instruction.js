@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameImage = document.getElementById("gameImage");
   const startQuizMain = document.getElementById("startQuizMain");
 
-  
+
+  const title = quiz.title;
+  const questionsCount = quiz.questions.length;
+  const time = `${questionsCount} mins`; 
+  const difficulty = "Medium"; 
+  const image = quiz.questionImage;
+
   if (gameTitle) gameTitle.textContent = title;
 
   if (gameDescription) {
@@ -26,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (gameTime) gameTime.textContent = `⏱ ${time}`;
-  if (gameQuestions) gameQuestions.textContent = `❓ ${questions}`;
+  if (gameQuestions) gameQuestions.textContent = `❓ ${questionsCount} questions`;
   if (gameDifficulty) gameDifficulty.textContent = `🎯 ${difficulty}`;
 
   if (gameImage) {
