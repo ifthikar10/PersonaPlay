@@ -1,6 +1,8 @@
 const quizList = {
   travel: {
     title: "Travel Personality Quiz",
+    time: "5 mins",
+    difficulty: "Medium",
     questionImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
     answerImages: {
       adventurous: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
@@ -104,6 +106,8 @@ const quizList = {
 
   fashion: {
     title: "Fashion Personality Quiz",
+    time: "6 mins",
+    difficulty: "Easy",
     questionImage: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
     answerImages: {
       adventurous: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
