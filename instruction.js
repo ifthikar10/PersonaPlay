@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const title = quiz.title;
   const questionsCount = quiz.questions.length;
-  const time = `${questionsCount} mins`; 
-  const difficulty = "Medium"; 
+  const time = quiz.time || `${questionsCount} mins`;
+  const difficulty = quiz.difficulty || "Medium";
   const image = quiz.questionImage;
 
   if (gameTitle) gameTitle.textContent = title;
