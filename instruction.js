@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
 
-  const title = params.get("title") || "Personality Quiz";
-  const time = params.get("time") || "5 mins";
-  const questions = params.get("questions") || "10 questions";
-  const difficulty = params.get("difficulty") || "Medium";
-  const image =
-    params.get("image") ||
-    "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?auto=format&fit=crop&w=900&q=80";
   const quizKey = params.get("quiz") || "travel";
+  const quiz = window.quizList?.[quizKey];
+
+  if (!quiz) {
+    console.error("Quiz not found");
+    return;
+  }
 
   const gameTitle = document.getElementById("gameTitle");
   const gameDescription = document.getElementById("gameDescription");
