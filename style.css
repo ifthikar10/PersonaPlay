@@ -84,6 +84,9 @@ body {
   font-size: 14px;
   display: inline-block;
   transition: 0.3s ease;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .user-name {
@@ -95,6 +98,9 @@ body {
 .logout {
   background: #ff5f45;
   color: #fff;
+}
+.logout:hover {
+  background: #e14d36;
 }
 
 .login,
