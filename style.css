@@ -76,6 +76,12 @@ body {
   gap: 12px;
 }
 
+button {
+  border: none !important;
+  outline: none;
+  background: none;
+}
+
 .btn {
   text-decoration: none;
   padding: 8px 18px;
@@ -84,8 +90,7 @@ body {
   font-size: 14px;
   display: inline-block;
   transition: 0.3s ease;
-  border: 1px solid #ff5f45;
-  outline: none;
+  border: none;
   cursor: pointer;
 }
 
