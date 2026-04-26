@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameImage = document.getElementById("gameImage");
   const startQuizMain = document.getElementById("startQuizMain");
 
+  const quizKey = params.get("quiz") || "travel";
+
+  const quiz = window.quizList?.[quizKey];
+
+  if (quiz) {
+    gameTitle.textContent = quiz.title;
+    gameImage.src = quiz.questionImage;
+  }
+  
   if (gameTitle) gameTitle.textContent = title;
 
   if (gameDescription) {
