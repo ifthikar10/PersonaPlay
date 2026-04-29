@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     questionLabel.textContent = `Q${current + 1}:`;
     questionText.textContent = q.question;
-    questionImage.src = quiz.questionImage;
+    questionImage.src = q.image;
     questionImage.alt = q.question;
 
     answersGrid.innerHTML = "";
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.id = `answer-${current}-${index}`;
 
       const img = document.createElement("img");
-      img.src = quiz.answerImages[answer.type];
+      img.src = answer.image;
       img.alt = answer.text;
 
       const txt = document.createElement("p");
