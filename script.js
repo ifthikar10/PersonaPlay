@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial render
   renderQuizzes(allQuizzes);
 
-  // 🔍 Search functionality
+  // Search functionality
   searchInput.addEventListener("input", (e) => {
     const query = e.target.value.toLowerCase();
 
