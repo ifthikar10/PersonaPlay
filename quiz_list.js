@@ -3,21 +3,30 @@ const quizList = {
     title: "Travel Personality Quiz",
     time: "5 mins",
     difficulty: "Medium",
-    questionImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-    answerImages: {
-      adventurous: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
-      calm: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80",
-      social: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80",
-      creative: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=80"
-    },
+    questionImage: "Image/travel/travel_quiz.jpg",
     questions: [
       {
         question: "How do you prefer to spend your holiday?",
+        image: "Image/travel/Q1/quiz_01.jpg",
         answers: [
-          { text: "Exploring new places", type: "adventurous" },
-          { text: "Relaxing quietly", type: "calm" },
-          { text: "Hanging out with friends", type: "social" },
-          { text: "Trying creative activities", type: "creative" }
+          { 
+            text: "Exploring new places", 
+            type: "adventurous",
+            image: "Image/travel/Q1/travel_quiz_01_answer_01.jpg"
+          },
+          { 
+            text: "Relaxing quietly", 
+            type: "calm",
+            image: "Image/travel/Q1/travel_quiz_01_answer_02.jpg"
+          },
+          { text: "Hanging out with friends", 
+            type: "social",
+            image: "Image/travel/Q1/travel_quiz_01_answer_03.jpg" 
+          },
+          { text: "Trying creative activities", 
+            type: "creative",
+            image: "Image/travel/Q1/travel_quiz_01_answer_04.jpg" 
+          }
         ]
       },
       {
