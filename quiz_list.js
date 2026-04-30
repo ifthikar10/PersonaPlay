@@ -137,7 +137,7 @@ const quizList = {
           { 
             text: "Mountains", 
             type: "adventurous",
-            image: "Image/travel/Q6/travel_quiz_06_answer_01.jpg"  
+            image: "Image/travel/Q6/travel_quiz_06_answer_01.jpeg"  
           },
           { 
             text: "Beach", 
@@ -178,7 +178,7 @@ const quizList = {
           { 
             text: "Notebook", 
             type: "creative",
-            image: "Image/travel/Q7/travel_quiz_07_answer_04.jpg"   
+            image: "Image/travel/Q7/travel_quiz_07_answer_04.jpeg"   
           }
         ]
       },
@@ -246,17 +246,17 @@ const quizList = {
           { 
             text: "Relaxing stay", 
             type: "calm",
-            image: "Image/travel/Q10/travel_quiz_10_answer_02.jpg"  
+            image: "Image/travel/Q10/travel_quiz_10_answer_02.jpeg"  
           },
           { 
             text: "Party trip", 
             type: "social",
-            image: "Image/travel/Q10/travel_quiz_10_answer_03.jpg" 
+            image: "Image/travel/Q10/travel_quiz_10_answer_03.jpeg" 
           },
           { 
             text: "Creative retreat", 
             type: "creative",
-            image: "Image/travel/Q10/travel_quiz_10_answer_04.jpg"  
+            image: "Image/travel/Q10/travel_quiz_10_answer_04.jpeg"  
           }
         ]
       }
