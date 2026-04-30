@@ -31,83 +31,233 @@ const quizList = {
       },
       {
         question: "Pick your ideal trip:",
+        image: "Image/travel/Q2/quiz_02.jpg",
         answers: [
-          { text: "Road trip", type: "adventurous" },
-          { text: "Beach retreat", type: "calm" },
-          { text: "City tour", type: "social" },
-          { text: "Cultural experience", type: "creative" }
+          { 
+            text: "Road trip", 
+            type: "adventurous",
+            image: "Image/travel/Q2/travel_quiz_02_answer_01.jpg" 
+          },
+          { text: "Beach retreat", 
+           type: "calm",
+            image: "Image/travel/Q2/travel_quiz_02_answer_02.jpg"           
+          },
+          { text: "City tour", 
+           type: "social",
+            image: "Image/travel/Q2/travel_quiz_02_answer_03.jpg" 
+          },
+          { text: "Cultural experience", 
+           type: "creative",
+            image: "Image/travel/Q2/travel_quiz_02_answer_04.jpg" 
+          }
         ]
       },
       {
         question: "What excites you most while traveling?",
+        image: "Image/travel/Q3/quiz_03.jpg",
         answers: [
-          { text: "New adventures", type: "adventurous" },
-          { text: "Peaceful surroundings", type: "calm" },
-          { text: "Meeting people", type: "social" },
-          { text: "Learning culture", type: "creative" }
+          { 
+            text: "New adventures", 
+            type: "adventurous",
+            image: "Image/travel/Q3/travel_quiz_03_answer_01.jpg"  
+          },
+          { 
+            text: "Peaceful surroundings", 
+            type: "calm",
+            image: "Image/travel/Q3/travel_quiz_03_answer_02.jpg"  
+          },
+          { 
+            text: "Meeting people", 
+            type: "social",
+            image: "Image/travel/Q3/travel_quiz_03_answer_03.jpg"  
+          },
+          { 
+            text: "Learning culture", 
+            type: "creative",
+            image: "Image/travel/Q3/travel_quiz_03_answer_04.jpg"  
+          }
         ]
       },
       {
         question: "Your travel style is:",
+        image: "Image/travel/Q4/quiz_04.jpg",
         answers: [
-          { text: "Spontaneous", type: "adventurous" },
-          { text: "Planned and slow", type: "calm" },
-          { text: "Group-based", type: "social" },
-          { text: "Unique and artistic", type: "creative" }
+          { 
+            text: "Spontaneous", 
+            type: "adventurous",
+            image: "Image/travel/Q4/travel_quiz_04_answer_01.jpg" 
+          },
+          { 
+            text: "Planned and slow", 
+            type: "calm",
+            image: "Image/travel/Q4/travel_quiz_04_answer_02.jpg"  
+          },
+          { 
+            text: "Group-based", 
+            type: "social",
+            image: "Image/travel/Q4/travel_quiz_04_answer_03.jpg"  
+          },
+          { 
+            text: "Unique and artistic", 
+            type: "creative",
+            image: "Image/travel/Q4/travel_quiz_04_answer_04.jpg"  
+          }
         ]
       },
       {
         question: "Favorite travel memory type?",
+        image: "Image/travel/Q5/quiz_05.jpg",
         answers: [
-          { text: "Thrill and action", type: "adventurous" },
-          { text: "Peaceful moments", type: "calm" },
-          { text: "Fun with friends", type: "social" },
-          { text: "Beautiful experiences", type: "creative" }
+          { 
+            text: "Thrill and action", 
+            type: "adventurous",
+            image: "Image/travel/Q5/travel_quiz_05_answer_01.jpg"  
+          },
+          { 
+            text: "Peaceful moments", 
+            type: "calm",
+            image: "Image/travel/Q5/travel_quiz_05_answer_02.jpg"  
+          },
+          { 
+            text: "Fun with friends", 
+            type: "social",
+            image: "Image/travel/Q5/travel_quiz_05_answer_03.jpg"  
+          },
+          { 
+            text: "Beautiful experiences", 
+            type: "creative",
+            image: "Image/travel/Q5/travel_quiz_05_answer_04.jpg"  
+          }
         ]
       },
       {
         question: "Pick a travel destination:",
+        image: "Image/travel/Q6/quiz_06.jpg",
         answers: [
-          { text: "Mountains", type: "adventurous" },
-          { text: "Beach", type: "calm" },
-          { text: "City", type: "social" },
-          { text: "Historic town", type: "creative" }
+          { 
+            text: "Mountains", 
+            type: "adventurous",
+            image: "Image/travel/Q6/travel_quiz_06_answer_01.jpg"  
+          },
+          { 
+            text: "Beach", 
+            type: "calm",
+            image: "Image/travel/Q6/travel_quiz_06_answer_02.jpg"  
+          },
+          { 
+            text: "City", 
+            type: "social",
+            image: "Image/travel/Q6/travel_quiz_06_answer_03.jpg"  
+          },
+          { 
+            text: "Historic town", 
+            type: "creative",
+            image: "Image/travel/Q6/travel_quiz_06_answer_04.jpg"  
+          }
         ]
       },
       {
         question: "What do you pack first?",
+        image: "Image/travel/Q7/quiz_07.jpg",
         answers: [
-          { text: "Adventure gear", type: "adventurous" },
-          { text: "Comfort items", type: "calm" },
-          { text: "Camera", type: "social" },
-          { text: "Notebook", type: "creative" }
+          { 
+            text: "Adventure gear", 
+            type: "adventurous",
+            image: "Image/travel/Q7/travel_quiz_07_answer_01.jpg"  
+          },
+          { 
+            text: "Comfort items", 
+            type: "calm",
+            image: "Image/travel/Q7/travel_quiz_07_answer_02.jpg"   
+          },
+          { 
+            text: "Camera", 
+            type: "social",
+            image: "Image/travel/Q7/travel_quiz_07_answer_03.jpg"   
+          },
+          { 
+            text: "Notebook", 
+            type: "creative",
+            image: "Image/travel/Q7/travel_quiz_07_answer_04.jpg"   
+          }
         ]
       },
       {
         question: "Your travel goal is:",
+        image: "Image/travel/Q8/quiz_08.jpg",
         answers: [
-          { text: "Explore unknown", type: "adventurous" },
-          { text: "Relax deeply", type: "calm" },
-          { text: "Create memories", type: "social" },
-          { text: "Find inspiration", type: "creative" }
+          { 
+            text: "Explore unknown", 
+            type: "adventurous",
+            image: "Image/travel/Q8/travel_quiz_08_answer_01.jpg"   
+          },
+          { 
+            text: "Relax deeply", 
+            type: "calm",
+            image: "Image/travel/Q8/travel_quiz_08_answer_02.jpg"  
+          },
+          { 
+            text: "Create memories", 
+            type: "social",
+            image: "Image/travel/Q8/travel_quiz_08_answer_03.jpg"  
+          },
+          { 
+            text: "Find inspiration", 
+            type: "creative",
+            image: "Image/travel/Q8/travel_quiz_08_answer_04.jpg"  
+          }
         ]
       },
       {
         question: "How do you plan trips?",
+        image: "Image/travel/Q9/quiz_09.jpg",
         answers: [
-          { text: "Last minute", type: "adventurous" },
-          { text: "Carefully", type: "calm" },
-          { text: "With friends", type: "social" },
-          { text: "With unique ideas", type: "creative" }
+          { 
+            text: "Last minute", 
+            type: "adventurous",
+            image: "Image/travel/Q9/travel_quiz_09_answer_01.jpg"  
+          },
+          { 
+            text: "Carefully", 
+            type: "calm",
+            image: "Image/travel/Q9/travel_quiz_09_answer_02.jpg" 
+          },
+          { 
+            text: "With friends", 
+            type: "social",
+            image: "Image/travel/Q9/travel_quiz_09_answer_03.jpg" 
+          },
+          { 
+            text: "With unique ideas", 
+            type: "creative",
+            image: "Image/travel/Q9/travel_quiz_09_answer_04.jpg" 
+          }
         ]
       },
       {
         question: "Your ideal weekend trip:",
+        image: "Image/travel/Q10/quiz_10.jpg",
         answers: [
-          { text: "Adventure outing", type: "adventurous" },
-          { text: "Relaxing stay", type: "calm" },
-          { text: "Party trip", type: "social" },
-          { text: "Creative retreat", type: "creative" }
+          { 
+            text: "Adventure outing", 
+            type: "adventurous",
+            image: "Image/travel/Q10/travel_quiz_10_answer_01.jpg" 
+          },
+          { 
+            text: "Relaxing stay", 
+            type: "calm",
+            image: "Image/travel/Q10/travel_quiz_10_answer_02.jpg"  
+          },
+          { 
+            text: "Party trip", 
+            type: "social",
+            image: "Image/travel/Q10/travel_quiz_10_answer_03.jpg" 
+          },
+          { 
+            text: "Creative retreat", 
+            type: "creative",
+            image: "Image/travel/Q10/travel_quiz_10_answer_04.jpg"  
+          }
         ]
       }
     ]
