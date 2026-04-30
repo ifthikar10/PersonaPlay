@@ -137,7 +137,8 @@ const quizList = {
           { 
             text: "Mountains", 
             type: "adventurous",
-            image: "Image/travel/Q6/travel_quiz_06_answer_01.jpeg"  
+            image: "Image/travel/Q6/travel_quiz_06_answer_01.jpeg" 
+            
           },
           { 
             text: "Beach", 
