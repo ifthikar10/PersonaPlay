@@ -32,10 +32,15 @@ body {
 }
 
 .logo {
+  text-decoration: none;
   font-size: 28px;
   font-weight: 700;
   color: #ff5f45;
   margin-left: 5px;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .search-box {
